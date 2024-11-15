@@ -22,8 +22,8 @@ app.get("/", async (req,res) => {
             user: result.data.username
         });
     } catch (error) {
-        console.log(error.message);
-        res.status(500).send(error.message)
+        console.log(error.response.data);
+        res.status(505);
     }
 })
 // secret and the username of the secret.
